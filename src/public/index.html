@@ -7,5 +7,27 @@
 </head>
 <body>
     <h1>Welcome</h1>
+
+    <div>
+        <h2>Agregar Productos</h2>
+        <form action="/api/products" method="POST">
+            <label>Title</label>
+            <input type="text" name="name"> 
+            <label>Description</label>
+            <input type="text" name="description"> 
+            <label>Code</label>
+            <input type="text" name="code"> 
+            <label>Price</label>
+            <input type="number" name="price"> 
+            <label>Stock</label>
+            <input type="text" name="stock"> 
+            <label>Category</label>
+            <input type="text" name="category"> 
+            <label>Thumbnails</label>
+            <input type="text" name="thumbnails"> 
+            <input type="submit">
+
+        </form>
+    </div>
 </body>
 </html>

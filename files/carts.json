@@ -1,0 +1,33 @@
+{
+	"carts": [
+		{
+			"id": 1,
+			"products": []
+		},
+		{
+			"id": 2,
+			"products": [
+				"sarasa",
+				"sarasa2"
+			]
+		},
+		{
+			"id": 3,
+			"products": [
+				{
+					"id": 5,
+					"quantity": 4
+				},
+				{
+					"id": 7,
+					"quantity": 2
+				}
+			]
+		},
+		{
+			"id": 4,
+			"products": []
+		}
+	],
+	"maxId": 4
+}

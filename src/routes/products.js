@@ -1,6 +1,8 @@
 import { Router } from "express";
+import ProductManager from '../productmanager.js';
 
 const router = Router();
+const productManager = new ProductManager();
 
 router.get('/', async (req,res) => {
     let limit =  parseInt(req.query.limit);
@@ -24,6 +26,40 @@ router.get('/:pid', async (req, res) => {
         res.send('No se encuentra el producto solicitado');
     } else {
         res.json(product);
+    }
+});
+
+router.post('/', async (req,res) => {
+    const { title, description, code,  price, stock, category, thumbnail } = req.body;
+
+    try {
+        productManager.addProduct(title, description, code,  price, stock, category, thumbnail);
+        res.status(201).json({ message: 'Funcion Ejecutada' });
+    } catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+router.put('/:pid', async (req, res) => {
+    const pid = parseInt(req.params.pid);
+    const { property, newValue } = req.body;
+
+    try {
+        productManager.updateProduct(pid, property, newValue);
+        res.status(200).json({ message: 'Funcion ejecutada' });
+    } catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+router.delete('/:pid', async (req, res) => {
+    const pid = parseInt(req.params.pid);
+
+    try {
+        productManager.deleteProduct(pid);
+        res.status(200).json({ message: 'Funcion Ejecutada' });
+    } catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
     }
 });
 

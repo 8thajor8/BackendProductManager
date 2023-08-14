@@ -21,22 +21,41 @@ class ProductManager{
         
     }
 
-    addProduct = (title,description,price,thumbnail,stock) => {
+    addProduct = (title, description, code,  price, stock, category, thumbnail) => {
         
-        if (!title || !description || !price || !thumbnail || !stock) {
+        if (!title || !description || !code || !price  || !stock) {
             console.log('Todos los valores del producto son requeridos');
             return;
         }
+
+        if (typeof price !== 'number' || price <= 0) {
+            console.log('El precio debe ser un número mayor que 0');
+            return;
+        }
+    
+           
+        if (typeof stock !== 'number') {
+            console.log('El stock debe ser un número');
+            return;
+        }
+    
+        if (!Array.isArray(thumbnail)) {
+            console.log('Thumbnails debe ser un array');
+            return;
+
+        }
         const product = {
+            id: ++ProductManager.id,
             title,
             description,
+            code,
             price,
-            thumbnail,
+            status: true,
             stock,
+            category,
+            thumbnail
             
         }
-
-        product.code=++ProductManager.id;
 
         this.products.push(product);
         console.log(product);
@@ -45,7 +64,7 @@ class ProductManager{
     }
 
     getProductById = (id) => {
-        const productfound = this.products.find((product) => product.code === id);
+        const productfound = this.products.find((product) => product.id === id);
         if(!productfound){
             console.log('No hay producto con ese ID');
             return;
@@ -55,14 +74,14 @@ class ProductManager{
     }
 
     updateProduct = (id, property, newValue) => {
-        const productToUpdate = this.products.find((product) => product.code === id);
+        const productToUpdate = this.products.find((product) => product.id === id);
 
         if (!productToUpdate) {
             console.log('No hay producto con ese ID');
             return;
         }
 
-        if (property === 'code') {
+        if (property === 'id') {
             console.log("No se permite cambiar el valor del ID");
             return;
         }
@@ -78,7 +97,7 @@ class ProductManager{
 
     deleteProduct = (id) => {
 
-        const deleteIndex = this.products.findIndex((product) => product.code === id);
+        const deleteIndex = this.products.findIndex((product) => product.id === id);
         if (deleteIndex === -1) {
             console.log('No hay producto con ese ID');
             return;

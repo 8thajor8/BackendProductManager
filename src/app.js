@@ -1,16 +1,13 @@
 import express from 'express';
-import ProductManager from './productmanager.js';
 import productsRouter from './routes/products.js';
+import cartsRouter from './routes/carts.js';
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/static', express.static('public'));
-
-const productManager = new ProductManager();
-
+app.use('/static', express.static('src/public'));
 app.use('/api/products', productsRouter);
-
+app.use('/api/carts', cartsRouter);
 app.listen(8080, () => {
     console.log('Servidor en puerto 8080');
 });
