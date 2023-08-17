@@ -230,7 +230,17 @@
 			"stock": 10,
 			"category": "test",
 			"thumbnail": []
+		},
+		{
+			"id": 23,
+			"title": "10",
+			"description": "10",
+			"code": "10",
+			"price": 10,
+			"status": true,
+			"stock": 10,
+			"category": "10"
 		}
 	],
-	"maxId": 22
+	"maxId": 23
 }

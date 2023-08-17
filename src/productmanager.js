@@ -39,11 +39,7 @@ class ProductManager{
             return;
         }
     
-        if (!Array.isArray(thumbnail)) {
-            console.log('Thumbnails debe ser un array');
-            return;
-
-        }
+        
         const product = {
             id: ++ProductManager.id,
             title,

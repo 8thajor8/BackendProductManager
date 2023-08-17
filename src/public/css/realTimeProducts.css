@@ -1,0 +1,100 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    margin: 0;
+}
+#product-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    justify-content: space-between;
+}
+#product-list {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+}
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+.add-box {
+    flex: 1;
+    padding: 20px;
+    
+   
+}
+
+.add-box form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Add margin to separate from the following box */
+}
+.add-box label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.add-box input[type="text"],
+.add-box input[type="number"] {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.add-box select {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.add-box button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: flex-start; /* Align the button to the left side */
+}
+.add-box button:hover {
+    background-color: #0056b3;
+}

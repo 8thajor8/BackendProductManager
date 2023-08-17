@@ -38,6 +38,7 @@ router.post('/', async (req,res) => {
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
+    req.io.emit('newProduct', product);
 });
 
 router.put('/:pid', async (req, res) => {
@@ -50,6 +51,7 @@ router.put('/:pid', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
+    req.io.emit('updatedProduct', updatedProduct);
 });
 
 router.delete('/:pid', async (req, res) => {
@@ -61,6 +63,7 @@ router.delete('/:pid', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
+    req.io.emit('deletedProduct', deletedProductId);
 });
 
 export default router
