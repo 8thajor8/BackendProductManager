@@ -82,6 +82,11 @@ class ProductManager{
             return;
         }
 
+        if (property === 'price' || property === 'stock') {
+            newValue = parseInt(newValue);
+            
+        }
+
         if (productToUpdate.hasOwnProperty(property)) {
             productToUpdate[property] = newValue;
             this.saveProducts();
@@ -137,16 +142,3 @@ class ProductManager{
 
 export default ProductManager;
 
-/* const productmanagertest = new ProductManager()
-console.log(productmanagertest.getProducts())
-productmanagertest.addProduct('testttitle','testdescription','textprice','testthumbnail','teststock')
-productmanagertest.addProduct('testttitle2','testdescription2','textprice2','testthumbnail2','teststock2')
-productmanagertest.addProduct('testdescription3','textprice3','testthumbnail3','teststock3')
-productmanagertest.addProduct('testttitle4','testdescription4','textprice4','testthumbnail4','teststock4')
-productmanagertest.getProductById(5)
-productmanagertest.getProductById(2)
-productmanagertest.deleteProduct(2)
-productmanagertest.updateProduct(1, 'color', 'testeo de propiedad invalida')
-productmanagertest.updateProduct(1, 'code', 10)
-productmanagertest.updateProduct(1, 'title', 'Updated')
-console.log(productmanagertest.getProducts())  */

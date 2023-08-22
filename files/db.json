@@ -1,239 +1,28 @@
 {
 	"products": [
 		{
-			"id": 1,
-			"title": "puttest",
-			"description": "test",
-			"code": "test",
+			"id": 26,
+			"title": "testlogs2",
+			"description": "10",
+			"code": "10",
 			"price": 10,
 			"status": true,
 			"stock": 10,
-			"category": "test",
-			"thumbnail": []
+			"category": "10"
 		},
 		{
-			"id": 2,
-			"title": "test",
-			"description": "test",
-			"code": "test",
+			"id": 27,
+			"title": "testlogs3",
+			"description": "10",
+			"code": "10",
 			"price": 10,
 			"status": true,
 			"stock": 10,
-			"category": "test",
-			"thumbnail": []
+			"category": "10"
 		},
 		{
-			"id": 3,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 4,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 5,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 6,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 7,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 8,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 9,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 10,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 11,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 12,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 13,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 14,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 15,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 16,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 17,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 18,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 19,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 21,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 22,
-			"title": "test",
-			"description": "test",
-			"code": "test",
-			"price": 10,
-			"status": true,
-			"stock": 10,
-			"category": "test",
-			"thumbnail": []
-		},
-		{
-			"id": 23,
-			"title": "10",
+			"id": 28,
+			"title": "testlogs3",
 			"description": "10",
 			"code": "10",
 			"price": 10,
@@ -242,5 +31,5 @@
 			"category": "10"
 		}
 	],
-	"maxId": 23
+	"maxId": 28
 }

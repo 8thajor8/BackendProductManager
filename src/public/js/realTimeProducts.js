@@ -1,3 +1,4 @@
+
 const socket = io();
 
 function addProduct() {
@@ -20,19 +21,29 @@ function addProduct() {
 }
 
 function updateProduct() {
-    socket.emit('updatedProduct', {
-        id: id,
-        property: property,
-        newValue: newValue
+
+    const updateProductId = parseInt(document.getElementById('updateProductId').value);
+    const updateProperty = document.getElementById('updateProperty').value;
+    const updateNewValue = document.getElementById('updateNewValue').value;
+
+    socket.emit('updateProduct', {
+        id: updateProductId,
+        property: updateProperty,
+        newValue: updateNewValue
     });
 }
 
 function deleteProduct() {
-    socket.emit('deletedProduct', id);
+
+    const deleteProductId = parseInt(document.getElementById('deleteProductId').value);
+    
+    socket.emit('deleteProduct', {id: deleteProductId});
 }
 
-// Listen for 'productUpdate' event from the server
-socket.on('productUpdate', (updatedProductList) => {
-    // Update the product list in the view with the updatedProductList
-    // You can use DOM manipulation or a front-end framework like Vue or React
+
+socket.on('productChange', () => {
+    // Listen for the corresponding 'productChangeComplete' event
+    
+    location.reload();;
+    
 });

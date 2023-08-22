@@ -36,7 +36,7 @@ io.on('connection', socket => {
 
         try {
             productManager.addProduct(title, description, code, price, stock, category);
-            io.emit('productUpdated');
+            io.emit('productChange');
             
             socket.emit('addProductSuccess', { message: 'Product added successfully' });
             } catch (error) {
@@ -46,17 +46,31 @@ io.on('connection', socket => {
 
 
     socket.on('updateProduct', (updateData) => {
-        // Call the update product method from products.js
-        // Example: productsRouter.updateProduct(updateData.id, updateData.property, updateData.newValue);
-        // Emit an event to notify clients of the update
-        io.emit('productUpdated');
+        
+        const { id, property, newValue } = updateData;
+        
+        try {
+            productManager.updateProduct(id, property, newValue);
+            io.emit('productChange');
+            
+            socket.emit('updateProductSuccess', { message: 'Product updated successfully' });
+            } catch (error) {
+                socket.emit('updateProductError', { error: 'Internal server error' });
+            }
     });
 
-    socket.on('deleteProduct', (productId) => {
-        // Call the delete product method from products.js
-        // Example: productsRouter.deleteProduct(productId);
-        // Emit an event to notify clients of the update
-        io.emit('productUpdated');
+    socket.on('deleteProduct', (deleteData) => {
+        const { id } = deleteData;
+        
+        try {
+            productManager.deleteProduct(id);
+            io.emit('productChange');
+            
+            
+            socket.emit('deleteProductSuccess', { message: 'Product deleted successfully' });
+            } catch (error) {
+                socket.emit('deleteProductError', { error: 'Internal server error' });
+            }
     });
 });
 
