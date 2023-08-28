@@ -1,9 +1,19 @@
 {
 	"products": [
 		{
-			"id": 26,
-			"title": "testlogs2",
-			"description": "10",
+			"id": 29,
+			"title": "Test New",
+			"description": "prueba",
+			"code": "c10",
+			"price": 10,
+			"status": true,
+			"stock": 10,
+			"category": "10"
+		},
+		{
+			"id": 31,
+			"title": "Nuevo Producto",
+			"description": "descripcion",
 			"code": "10",
 			"price": 10,
 			"status": true,
@@ -11,9 +21,9 @@
 			"category": "10"
 		},
 		{
-			"id": 27,
-			"title": "testlogs3",
-			"description": "10",
+			"id": 32,
+			"title": "updated",
+			"description": "desc",
 			"code": "10",
 			"price": 10,
 			"status": true,
@@ -21,9 +31,19 @@
 			"category": "10"
 		},
 		{
-			"id": 28,
-			"title": "testlogs3",
-			"description": "10",
+			"id": 33,
+			"title": "Prueba",
+			"description": "desc",
+			"code": "10",
+			"price": 10,
+			"status": true,
+			"stock": 10,
+			"category": "10"
+		},
+		{
+			"id": 34,
+			"title": "prueba nueva",
+			"description": "description",
 			"code": "10",
 			"price": 10,
 			"status": true,
@@ -31,5 +51,5 @@
 			"category": "10"
 		}
 	],
-	"maxId": 28
+	"maxId": 34
 }

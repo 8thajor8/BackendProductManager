@@ -17,7 +17,7 @@
                 <label for="category">Category:</label>
                 <input type="text" id="category" name="category" required>
                     
-                <button type="button" onclick="addProduct()">Add</button>
+                <button type="button" id="addProductBtn">Add</button>
             </form>
         </div>
         <div id="product-list-specific" style="flex: 1;">
@@ -42,13 +42,13 @@
                 <input type="text" id="updateProductId" placeholder="Product ID">
                 <input type="text" id="updateProperty" placeholder="Property">
                 <input type="text" id="updateNewValue" placeholder="New Value">
-                <button onclick="updateProduct()">Update</button>
+                <button id="updateProductBtn">Update</button>
             </div>
             
             <div style="margin-top: 20px;">
                 <h2>Delete Product</h2>
                 <input type="text" id="deleteProductId" placeholder="Product ID">
-                <button onclick="deleteProduct()">Delete</button>
+                <button id="deleteProductBtn">Delete</button>
             </div>
         </div>
     </div>

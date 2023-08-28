@@ -1,7 +1,19 @@
 
 const socket = io();
 
-function addProduct() {
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const addProductBtn = document.getElementById('addProductBtn');
+    const updateProductBtn = document.getElementById('updateProductBtn');
+    const deleteProductBtn = document.getElementById('deleteProductBtn');
+    
+    addProductBtn.addEventListener('click', addProduct);
+    updateProductBtn.addEventListener('click', updateProduct);
+    deleteProductBtn.addEventListener('click', deleteProduct);
+});
+
+function addProduct(event) {
+    event.preventDefault();
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
     const code = document.getElementById('code').value;
@@ -18,10 +30,11 @@ function addProduct() {
         stock: stock,
         category: category
     });
+    
 }
 
-function updateProduct() {
-
+function updateProduct(event) {
+    event.preventDefault();
     const updateProductId = parseInt(document.getElementById('updateProductId').value);
     const updateProperty = document.getElementById('updateProperty').value;
     const updateNewValue = document.getElementById('updateNewValue').value;
@@ -31,13 +44,15 @@ function updateProduct() {
         property: updateProperty,
         newValue: updateNewValue
     });
+    
 }
 
-function deleteProduct() {
-
+function deleteProduct(event) {
+    event.preventDefault();
     const deleteProductId = parseInt(document.getElementById('deleteProductId').value);
     
     socket.emit('deleteProduct', {id: deleteProductId});
+    
 }
 
 

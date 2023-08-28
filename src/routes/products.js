@@ -33,20 +33,20 @@ router.post('/', async (req,res) => {
     const { title, description, code,  price, stock, category, thumbnail } = req.body;
 
     try {
-        productManager.addProduct(title, description, code,  price, stock, category, thumbnail);
+        const product = productManager.addProduct(title, description, code,  price, stock, category, thumbnail);
         res.status(201).json({ message: 'Funcion Ejecutada' });
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
     req.io.emit('newProduct', product);
 });
-
+ 
 router.put('/:pid', async (req, res) => {
     const pid = parseInt(req.params.pid);
     const { property, newValue } = req.body;
 
     try {
-        productManager.updateProduct(pid, property, newValue);
+        const updatedProduct = productManager.updateProduct(pid, property, newValue);
         res.status(200).json({ message: 'Funcion ejecutada' });
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
@@ -58,7 +58,7 @@ router.delete('/:pid', async (req, res) => {
     const pid = parseInt(req.params.pid);
 
     try {
-        productManager.deleteProduct(pid);
+        const deletedProductId = productManager.deleteProduct(pid);
         res.status(200).json({ message: 'Funcion Ejecutada' });
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
