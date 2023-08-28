@@ -42,7 +42,7 @@ io.on('connection', socket => {
             } catch (error) {
                 socket.emit('addProductError', { error: 'Internal server error' });
             }
-            io.emit('productChange');
+            
     });
 
 
@@ -58,7 +58,7 @@ io.on('connection', socket => {
             } catch (error) {
                 socket.emit('updateProductError', { error: 'Internal server error' });
             }
-            io.emit('productChange');
+           
     });
 
     socket.on('deleteProduct', (deleteData) => {
@@ -73,7 +73,7 @@ io.on('connection', socket => {
             } catch (error) {
                 socket.emit('deleteProductError', { error: 'Internal server error' });
             }
-            io.emit('productChange');
+            
     });
 });
 

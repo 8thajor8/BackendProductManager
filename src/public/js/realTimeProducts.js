@@ -57,7 +57,7 @@ function deleteProduct(event) {
 
 
 socket.on('productChange', () => {
-    // Listen for the corresponding 'productChangeComplete' event
+
     
     location.reload();;
     
