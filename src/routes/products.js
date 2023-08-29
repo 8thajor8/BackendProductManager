@@ -4,6 +4,7 @@ import ProductManager from '../productmanager.js';
 const router = Router();
 const productManager = new ProductManager();
 
+
 router.get('/', async (req,res) => {
     let limit =  parseInt(req.query.limit);
     const products = await productManager.getProducts()
